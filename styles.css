@@ -212,6 +212,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .timeline__item h3 { font-size: 18px; margin-top: 6px; }
 .timeline__org { color: var(--text); opacity: .8; font-size: 14.5px; margin: 2px 0 8px; }
 .timeline__item p:last-child { color: var(--muted); font-size: 15px; }
+.timeline__list li { position: relative; padding-left: 16px; color: var(--muted); font-size: 15px; }
+.timeline__list li + li { margin-top: 4px; }
+.timeline__list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 6px; height: 2px; background: var(--accent); }
+.timeline__more { margin-top: 6px; }
+.timeline__more summary { cursor: pointer; color: var(--accent); font-size: 14px; list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+.timeline__more summary::-webkit-details-marker { display: none; }
+.timeline__more summary::after { content: "+"; font-family: var(--mono); }
+.timeline__more[open] summary::after { content: "\2212"; }
+.timeline__more summary:hover { text-decoration: underline; }
+.timeline__more .timeline__list { margin-top: 4px; }
 .creds { display: grid; gap: 12px; }
 .cred { display: flex; gap: 16px; padding: 18px 20px; }
 .cred h3 { font-size: 15.5px; }
